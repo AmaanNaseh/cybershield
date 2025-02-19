@@ -1,6 +1,8 @@
 # Risk Analytics System
 
+<p align="justify">
 The Risk Analytics System aims to provide robust, real-time monitoring and threat detection for users, ensuring the protection of systems against evolving cyber threats. By leveraging machine learning models, NLP techniques, and an intuitive dashboard, the platform offers personalized security insights and instant notifications to keep users informed of risks. With potential future expansions like IoT security, AI-driven predictions, and automated responses, this project has the capability to become a comprehensive and dynamic tool for managing cybersecurity risks.
+</p>
 
 ## Tech Stack
 
