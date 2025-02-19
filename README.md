@@ -9,10 +9,12 @@ The Risk Analytics System aims to provide robust, real-time monitoring and threa
 ## Software Architecture
 
 1. Activity Diagram
-   ![Image](https://github.com/user-attachments/assets/cfad40b5-e3bf-499f-9dd2-c6726e914f0e)
+
+- ![Image](https://github.com/user-attachments/assets/cfad40b5-e3bf-499f-9dd2-c6726e914f0e)
 
 2. Class Diagram
-   ![Image](https://github.com/user-attachments/assets/deda37ac-fa64-4805-854c-11b20f4bf96a)
+
+- ![Image](https://github.com/user-attachments/assets/deda37ac-fa64-4805-854c-11b20f4bf96a)
 
 ## Setup Guide:
 
