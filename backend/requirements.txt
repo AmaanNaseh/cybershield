@@ -1,0 +1,13 @@
+Flask
+flask-cors
+flask-bcrypt
+scikit-learn
+numpy
+pandas
+joblib
+matplotlib
+seaborn
+python-dotenv
+pymongo
+spacy
+nltk
