@@ -8,7 +8,6 @@ import ViewReportDetails from "./pages/ViewReportDetails";
 import Navbar from "./components/Navbar";
 import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
-import About from "./pages/About";
 import Attributions from "./pages/Attributions";
 import AIMetrics from "./pages/AIMetrics";
 
@@ -22,7 +21,6 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/about" element={<About />} />
           <Route path="/attributions" element={<Attributions />} />
           <Route path="/predict" element={<Prediction />} />
           <Route path="/reports" element={<ViewReports />} />

@@ -27,7 +27,7 @@ The Risk Analytics System aims to provide robust, real-time monitoring and threa
 1. Clone the repository
 
 ```bash
-git clone https://github.com/AmaanNaseh/cybershield.git
+git clone https://github.com/Hamza27-code/cybershield.git
 ```
 
 2. Navigate to backend folder, Install dependencies & run the project
