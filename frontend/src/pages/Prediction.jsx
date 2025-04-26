@@ -13,6 +13,20 @@ const Prediction = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handlePredict = async () => {
+    if (
+      threatLevel < 0 ||
+      threatLevel > 5 ||
+      vulnerabilityScore < 0 ||
+      vulnerabilityScore > 10 ||
+      impactFactor < 0 ||
+      impactFactor > 10
+    ) {
+      alert(
+        "Please enter valid values:\nThreat Level (0-5)\nVulnerability Score (0-10)\nImpact Factor (0-10)"
+      );
+      return;
+    }
+
     try {
       const token = localStorage.getItem("token");
 
@@ -47,7 +61,7 @@ const Prediction = () => {
         <h2 className="text-xl font-bold mb-4">Cyber Risk Prediction</h2>
         <input
           type="number"
-          placeholder="Threat Level"
+          placeholder="Threat Level (0-5)"
           className="input-field"
           value={threatLevel}
           onChange={(e) => setThreatLevel(e.target.value)}
@@ -55,7 +69,7 @@ const Prediction = () => {
         />
         <input
           type="number"
-          placeholder="Vulnerability Score"
+          placeholder="Vulnerability Score (0-10)"
           className="input-field"
           value={vulnerabilityScore}
           onChange={(e) => setVulnerabilityScore(e.target.value)}
@@ -63,7 +77,7 @@ const Prediction = () => {
         />
         <input
           type="number"
-          placeholder="Impact Factor"
+          placeholder="Impact Factor (0-10)"
           className="input-field"
           value={impactFactor}
           onChange={(e) => setImpactFactor(e.target.value)}

@@ -24,6 +24,12 @@ const Attributions = () => {
       >
         Business intelligence icons created by gravisio - Flaticon
       </a>
+      <a href="https://www.freepik.com/free-ai-image/cyber-security-concept-digital-art_236289565.htm">
+        Image by freepik
+      </a>
+      <a href="https://www.flaticon.com/free-icons/threat" title="threat icons">
+        Threat icons created by orvipixel - Flaticon
+      </a>
     </div>
   );
 };

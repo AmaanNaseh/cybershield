@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Footer from "./components/Footer";
 import Attributions from "./pages/Attributions";
 import AIMetrics from "./pages/AIMetrics";
+import Scanner from "./pages/Scanner";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/attributions" element={<Attributions />} />
+          <Route path="/threat-scanner" element={<Scanner />} />
           <Route path="/predict" element={<Prediction />} />
           <Route path="/reports" element={<ViewReports />} />
           <Route path="/view-report/:id" element={<ViewReportDetails />} />
