@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom"; // Import useParams to access the URL parameter
 import html2pdf from "html2pdf.js"; // Import html2pdf.js
+import { backendAPI } from "../utils/backendAPI";
 
 const ViewReportDetails = () => {
   const [report, setReport] = useState(null);
@@ -15,7 +16,7 @@ const ViewReportDetails = () => {
           navigate("/login"); // Redirect to login if no token is found
           return;
         }
-        const res = await axios.get(`http://127.0.0.1:5000/reports/${id}`, {
+        const res = await axios.get(`${backendAPI}/reports/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReport(res.data.report);

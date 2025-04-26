@@ -12,6 +12,8 @@ import spacy
 import nltk
 from nltk.tokenize import sent_tokenize
 from bson import ObjectId  # <-- Add this line
+import requests
+from bs4 import BeautifulSoup
 
 # Load environment variables
 load_dotenv()
@@ -172,6 +174,80 @@ def get_profile():
         return jsonify({"error": "User not found!"}), 404
     
     return jsonify({"full_name": user["full_name"], "email": user["email"]}), 200
+
+
+# List of risky keywords to scan for
+RISKY_KEYWORDS = [
+    "malware", "phishing", "trojan", "keylogger",
+    "virus", "spyware", "download.exe", "hack", "unauthorized", "ransomware"
+]
+
+def simple_website_scanner(url):
+    try:
+        # Normalize URL
+        if not url.startswith("http"):
+            url = "http://" + url
+
+        # Fetch website content
+        response = requests.get(url, timeout=5)
+        content = response.text
+
+        # Analyze SSL/TLS
+        ssl_present = url.startswith("https")
+
+        # Analyze risky keywords
+        soup = BeautifulSoup(content, "html.parser")
+        text = soup.get_text().lower()
+        risky_hits = sum(keyword in text for keyword in RISKY_KEYWORDS)
+
+        # Analyze page length
+        content_length = len(text)
+
+        # ---------------- Scoring ----------------
+        # Threat Level: based on risky keywords
+        threat_level = min(10, risky_hits * 2)
+
+        # Vulnerability Score: based on SSL and risky hits
+        vulnerability_score = 5 if not ssl_present else 2
+        vulnerability_score += min(5, risky_hits)
+
+        # Impact Factor: based on very short/very long page and risky content
+        if content_length < 500 or content_length > 100000:
+            impact_factor = 7
+        else:
+            impact_factor = 3
+        impact_factor += min(3, risky_hits)
+
+        # Ensure all are capped at 10
+        threat_level = min(threat_level, 10)
+        vulnerability_score = min(vulnerability_score, 10)
+        impact_factor = min(impact_factor, 10)
+
+        return {
+            "threatLevel": threat_level,
+            "vulnerabilityScore": vulnerability_score,
+            "impactFactor": impact_factor
+        }
+
+    except Exception as e:
+        print(f"Error scanning {url}: {e}")
+        return {"error": str(e)}
+
+# -------- API Route --------
+@app.route("/api/check-threat", methods=["POST"])
+def check_threat():
+    data = request.get_json()
+    url = data.get("url")
+
+    if not url:
+        return jsonify({"error": "No URL provided"}), 400
+
+    scan_result = simple_website_scanner(url)
+
+    if "error" in scan_result:
+        return jsonify({"error": scan_result["error"]}), 500
+
+    return jsonify(scan_result)
 
 
 # -------------------------- Running Application --------------------------

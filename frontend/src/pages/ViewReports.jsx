@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { backendAPI } from "../utils/backendAPI";
 
 const ViewReports = () => {
   const [reports, setReports] = useState([]);
@@ -15,7 +16,7 @@ const ViewReports = () => {
           navigate("/login"); // Redirect to login if no token is found
           return;
         }
-        const res = await axios.get("http://127.0.0.1:5000/reports", {
+        const res = await axios.get(`${backendAPI}/reports`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setReports(res.data.reports);
@@ -59,8 +60,8 @@ const ViewReports = () => {
   const sortedReports = sortReports(reports, sortBy);
 
   return (
-    <div className="bg-white py-8 px-4 rounded-lg shadow-md w-fit mx-auto">
-      <h2 className="text-xl font-bold mb-4 text-center">
+    <div className="mx-4 md:mx-10 py-8 px-4 rounded-lg shadow-md">
+      <h2 className="text-xl font-bold mb-4 text-center text-white">
         Previous Cyber Risk Reports
       </h2>
 
@@ -80,9 +81,9 @@ const ViewReports = () => {
       {sortedReports.length === 0 ? (
         <p>No reports found.</p>
       ) : (
-        <ul className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-10">
+        <ul className="flex flex-col md:flex-row flex-wrap items-center justify-start gap-10">
           {sortedReports.map((report, index) => (
-            <li key={index} className="mb-4 p-4 border rounded-md">
+            <li key={index} className="mb-4 p-4 border rounded-md bg-white">
               <h3 className="text-lg font-semibold">{report.title}</h3>
               <p className="text-gray-600">
                 Generated on: {new Date(report.generated_at).toLocaleString()}

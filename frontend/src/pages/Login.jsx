@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { backendAPI } from "../utils/backendAPI";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -10,13 +11,13 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://127.0.0.1:5000/login", {
+      const res = await axios.post(`${backendAPI}/login`, {
         email,
         password,
       });
       localStorage.setItem("token", res.data.token);
       alert("Login Successful!");
-      navigate("/predict"); // Redirect to Prediction Page
+      navigate("/"); // Redirect to Prediction Page
     } catch (err) {
       alert(err.response.data.error);
     }

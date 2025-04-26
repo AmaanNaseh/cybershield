@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { backendAPI } from "../utils/backendAPI";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -14,7 +15,7 @@ const Profile = () => {
         return;
       }
       try {
-        const response = await axios.get("http://localhost:5000/profile", {
+        const response = await axios.get(`${backendAPI}/profile`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { backendAPI } from "../utils/backendAPI";
 
 const Signup = () => {
   const [fullName, setFullName] = useState("");
@@ -11,7 +12,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://127.0.0.1:5000/signup", {
+      const res = await axios.post(`${backendAPI}/signup`, {
         full_name: fullName,
         email,
         password,

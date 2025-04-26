@@ -7,26 +7,26 @@ const Navbar = () => {
   const [isSideNavActive, setIsSideNavActive] = useState(false);
 
   return (
-    <nav className="sticky top-0 left-0 bg-gray-200 p-4 z-20 text-black flex items-center justify-between">
+    <nav className="sticky top-1 left-0 rounded-full mx-1 lg:mx-10 bg-[#94B4C1] p-4 z-20 text-black flex items-center justify-between">
       <Link to={"/"}>
-        <h1 className="text-2xl font-bold flex gap-2 items-center italic hover:scale-105">
+        <h1 className="text-2xl font-bold flex gap-2 items-center italic hover:scale-105 transition-all duration-300">
           <img src={logo} alt="logo" />
           Risk Analytics System
         </h1>
       </Link>
       <ul className="hidden lg:inline-flex gap-4">
         <Link to={"/login"}>
-          <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-blue-700 hover:bg-blue-600 text-white font-bold text-md">
+          <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-[#547792] hover:bg-[#547792]/75 text-white font-bold text-md">
             Login
           </li>
         </Link>
         <Link to={"/signup"}>
-          <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-blue-700 hover:bg-blue-600 text-white font-bold text-md">
+          <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-[#547792] hover:bg-[#547792]/75 text-white font-bold text-md">
             Signup
           </li>
         </Link>
         <Link to={"/profile"}>
-          <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-blue-700 hover:bg-blue-600 text-white font-bold text-md">
+          <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-[#547792] hover:bg-[#547792]/75 text-white font-bold text-md">
             Profile
           </li>
         </Link>
@@ -38,20 +38,20 @@ const Navbar = () => {
         }}
       />
       {isSideNavActive ? (
-        <div className="lg:hidden fixed top-[63px] z-20 right-0 bottom-0 px-8 py-4 bg-gray-200">
+        <div className="lg:hidden fixed top-[68px] z-20 right-2 px-8 py-10 bg-[#94B4C1]">
           <ul className="flex flex-col gap-4 items-center justify-center">
             <Link to={"/login"}>
-              <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-blue-700 hover:bg-blue-600 text-white font-bold text-md">
+              <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-[#547792] hover:bg-[#547792]/75 text-white font-bold text-md">
                 Login
               </li>
             </Link>
             <Link to={"/signup"}>
-              <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-blue-700 hover:bg-blue-600 text-white font-bold text-md">
+              <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-[#547792] hover:bg-[#547792]/75 text-white font-bold text-md">
                 Signup
               </li>
             </Link>
             <Link to={"/profile"}>
-              <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-blue-700 hover:bg-blue-600 text-white font-bold text-md">
+              <li className="p-2 rounded-[7px] min-w-[68px] text-center hover:scale-105 bg-[#547792] hover:bg-[#547792]/75 text-white font-bold text-md">
                 Profile
               </li>
             </Link>
