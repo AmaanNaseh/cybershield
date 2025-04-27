@@ -6,20 +6,20 @@ The Risk Analytics System aims to provide robust, real-time monitoring and threa
 
 ## Tech Stack
 
-![Image](https://github.com/user-attachments/assets/c12536cb-5eac-425f-b9d5-89b938d25da8)
+![Image](https://github.com/user-attachments/assets/e9d2ff56-cffb-4542-87cd-ea07763520f0)
 
 ## Software Architecture
 
 1. Activity Diagram
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/cfad40b5-e3bf-499f-9dd2-c6726e914f0e">
+<img src="https://github.com/user-attachments/assets/33eaf4a5-7722-4403-83f5-1b44e225e2f6">
 </p>
 
 2. Class Diagram
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/deda37ac-fa64-4805-854c-11b20f4bf96a">
+<img src="https://github.com/user-attachments/assets/7764c992-c39c-4778-affb-f80671afd4ec">
 </p>
 
 ## Setup Guide:
@@ -63,17 +63,25 @@ npm run dev
 ## Project Images
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/8a858671-7aef-459b-af94-9c289e9d3308">
+<img src="https://github.com/user-attachments/assets/53424eba-1408-45fa-86f1-fc8d681435a9">
 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/15e58f04-b688-4db5-bb88-10fed4aca710"></img>
+<img src="https://github.com/user-attachments/assets/a35e9877-42f2-4550-8c96-aea407940796">
 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/d061735d-c185-4074-a3e0-1a8a7d8a1a47"></img>
+<img src="https://github.com/user-attachments/assets/b9ba3b50-f296-498f-9e47-ff9e0ab72295">
 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/834fc3bf-9467-4850-b392-4f2ba3769a49"></img>
+<img src="https://github.com/user-attachments/assets/d7bed853-d504-4b05-89ad-209e495446e3">
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/073f4433-1a9c-49eb-bc4e-906c611900ab">
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/29f6d361-7a95-4b9d-a2f7-cdaf1a3378e3">
 </p>
