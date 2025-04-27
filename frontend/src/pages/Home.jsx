@@ -52,7 +52,7 @@ const Home = () => {
 
       <div className="flex flex-col items-center justify-center gap-10 md:gap-20 my-10 md:px-8 lg:px-20">
         <div className="flex flex-col items-center justify-evenly gap-4 bg-white/75 rounded-md shadow-sm shadow-white border-[1px] border-gray-200 text-black w-full md:w-[75%] p-4">
-          <div className="w-[150px]">
+          <div className="w-[150px] animate-bounce transition-all duration-75">
             <img src={scannerIcon} className="w-full" alt="image" />
           </div>
           <div className="flex flex-col items-center justify-center gap-4">
@@ -70,7 +70,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-evenly gap-4 bg-white/75 rounded-md shadow-sm shadow-white border-[1px] border-gray-200 text-black w-full md:w-[75%] p-4">
-          <div className="w-[150px]">
+          <div className="w-[150px] animate-bounce transition-all duration-75">
             <img src={riskAnalysisIcon} className="w-full" alt="image" />
           </div>
           <div className="flex flex-col items-center justify-center gap-4">
@@ -88,7 +88,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-evenly gap-4 bg-white/75 rounded-md shadow-sm shadow-white border-[1px] border-gray-200 text-black w-full md:w-[75%] p-4">
-          <div className="w-[150px]">
+          <div className="w-[150px] animate-bounce transition-all duration-75">
             <img src={cyberReportIcon} className="w-full" alt="image" />
           </div>
           <div className="flex flex-col items-center justify-center gap-4">
@@ -106,7 +106,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-evenly gap-4 bg-white/75 rounded-md shadow-sm shadow-white border-[1px] border-gray-200 text-black w-full md:w-[75%] p-4">
-          <div className="w-[200px]">
+          <div className="w-[150px] animate-bounce transition-all duration-75">
             <img src={AIMetricsIcon} className="w-full" alt="image" />
           </div>
           <div className="flex flex-col items-center justify-center gap-4">

@@ -98,10 +98,15 @@ const Prediction = () => {
         </Link>
       </div>
       <div>
-        <h1 className="text-center my-4 text-white text-lg">
-          Don't know these values? Use Threat Scanner
-        </h1>
-        <ThreatScanner />
+        <p className="text-center bg-black/50 w-fit px-4 py-2 my-4 mx-auto text-white text-lg">
+          Don't know these values? Use{" "}
+          <Link
+            to={"/threat-scanner"}
+            className="text-blue-400 underline hover:text-blue-300"
+          >
+            Threat Scanner
+          </Link>
+        </p>
       </div>
     </>
   );

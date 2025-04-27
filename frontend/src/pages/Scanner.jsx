@@ -1,5 +1,6 @@
 import React from "react";
 import ThreatScanner from "../components/ThreatScanner";
+import { Link } from "react-router-dom";
 
 const Scanner = () => {
   return (
@@ -9,6 +10,15 @@ const Scanner = () => {
         risk using our Analytics feature.
       </h1>
       <ThreatScanner />
+      <p className="text-center bg-black/50 w-fit px-4 py-2 mx-auto text-white font-semibold text-lg">
+        Done scanning?{" "}
+        <Link
+          to={"/predict"}
+          className="text-blue-400 hover:text-blue-300 underline"
+        >
+          Analyze Risk Now
+        </Link>
+      </p>
     </div>
   );
 };
