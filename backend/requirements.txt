@@ -1,6 +1,7 @@
 Flask
 flask-cors
 flask-bcrypt
+flask_jwt_extended
 scikit-learn
 numpy
 pandas
@@ -11,3 +12,4 @@ python-dotenv
 pymongo
 spacy
 nltk
+bs4
