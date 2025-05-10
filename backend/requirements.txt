@@ -13,3 +13,4 @@ pymongo
 spacy
 nltk
 bs4
+gunicorn
