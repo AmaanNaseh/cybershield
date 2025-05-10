@@ -14,6 +14,7 @@ from nltk.tokenize import sent_tokenize
 from bson import ObjectId  # <-- Add this line
 import requests
 from bs4 import BeautifulSoup
+import spacy.cli
 
 # Load environment variables
 load_dotenv()
@@ -43,6 +44,12 @@ def save_to_db(collection, data):
     print(f"✅ Data saved to {collection.name}")
 
 ## -------------------------- NLTK Handling --------------------------
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 nltk.download('punkt')
 nlp = spacy.load("en_core_web_sm")
